@@ -1,0 +1,346 @@
+{
+	"info": {
+		"_postman_id": "396db939-50d6-4fc2-924d-261eb1bf3c7d",
+		"name": "FSE1 ACCREDATION MOVIE APP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20584266"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"loginId\": \"akhil1\",\r\n  \"password\": \"Chillysos@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1.0/moviebooking/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1.0",
+						"moviebooking",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register(admin or user or guest)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"loginId\":\"123456\",\r\n    \"firstName\":\"Akhil\",\r\n    \"lastName\":\"Chills\",\r\n    \"email\": \"akhilchills15@gmail.com\",\r\n    \"contactNumber\": 99119911,\r\n    \"roles\": [\r\n        \"admin\"\r\n        ],\r\n        \"password\": \"Chillysos@123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1.0/moviebooking/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1.0",
+						"moviebooking",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all movies",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwYWQxIiwiaWF0IjoxNjg0OTM5Mjc1LCJleHAiOjE2ODUwMjU2NzV9.ceOMdx7qdv7WxBfkR6rwFxOtcQBha9xiKiZ_xfHPXSCv1R8FrQM0Grr7Bp8bZdIVUr5xohSqyvtSjtoMQRQgTg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1.0/moviebooking/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1.0",
+						"moviebooking",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search movies by movie name",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1.0/moviebooking/movies/search/RRR",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1.0",
+						"moviebooking",
+						"movies",
+						"search",
+						"RRR"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha2hpbDEiLCJpYXQiOjE2ODQ5NDAxNDQsImV4cCI6MTY4NTAyNjU0NH0.6qx8NR0NT6GSS2TGwrqhPko-TXSZ_2oLLWiS3eoJkNBU0-XUPosGT_L5iBLkO76eOhk2thYRJqZ54-QHhJH0yw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"loginId\": \"akhil1\",\r\n  \"password\": \"akhil@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1.0/moviebooking/akhil1/forgot",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1.0",
+						"moviebooking",
+						"akhil1",
+						"forgot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movie update ticket",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha2hpbDEiLCJpYXQiOjE2ODQ5NDE2MDMsImV4cCI6MTY4NTAyODAwM30.pmJssGNfo0W5dl5nMq12NoWtYeJDcIbYTj8qWBVa9b_cRqwTiWoop7hyjexqvme0hcm8Iol08PWnOtmmgz5zoQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"timestamp\": 1684941248,\r\n    \"date\": \"2023-05-24T15:14:08.000+00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1.0/moviebooking/RRR/update",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1.0",
+						"moviebooking",
+						"RRR",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "book ticket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"get_id\": {\r\n    \"timestamp\": 0,\r\n    \"date\": \"2023-05-23T14:39:35.680Z\"\r\n  },\r\n  \"loginId\": \"Prasanna12\",\r\n  \"movieName\": \"RRR\",\r\n  \"theatreName\": \"IMAX\",\r\n  \"noOfTickets\": 2,\r\n  \"seatNumber\": [\r\n    \"string\"\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1.0/moviebooking/RRR/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1.0",
+						"moviebooking",
+						"RRR",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete movie(Admin Only)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha2hpbDEiLCJpYXQiOjE2ODQ4NTUzOTgsImV4cCI6MTY4NDk0MTc5OH0.xqhdlXygsAHi-BbiyIvi4ezLfdpqUVVjqXYvzeUj6GiOraqg9taWVMZJmXnSnO_YXmKCqr9nw6oes8Q6rNTXOg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1.0/moviebooking/Bahubali/delete",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1.0",
+						"moviebooking",
+						"Bahubali",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get booked tickets by movie name(Admin Only)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha2hpbDEiLCJpYXQiOjE2ODQ4NTUzOTgsImV4cCI6MTY4NDk0MTc5OH0.xqhdlXygsAHi-BbiyIvi4ezLfdpqUVVjqXYvzeUj6GiOraqg9taWVMZJmXnSnO_YXmKCqr9nw6oes8Q6rNTXOg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1.0/moviebooking/getallbookedtickets/RRR",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1.0",
+						"moviebooking",
+						"getallbookedtickets",
+						"RRR"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
